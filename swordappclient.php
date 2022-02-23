@@ -100,16 +100,16 @@ class SWORDAPPClient {
 
         // Was it a successful result?
         if (($sac_status >= 200) && ($sac_status < 300)) {
-            try {
+           // try {
                 // Get the deposit results
-                $sac_xml = @new SimpleXMLElement($sac_resp);
-                $sac_ns = $sac_xml->getNamespaces(true);
+             //   $sac_xml = @new SimpleXMLElement($sac_resp);
+             //   $sac_ns = $sac_xml->getNamespaces(true);
 
                 // Build the deposit response object
-                $sac_dresponse->buildhierarchy($sac_xml, $sac_ns);
-            } catch (Exception $e) {
-                throw new Exception("Error parsing response entry (" . $e->getMessage() . ")");
-            }
+             //   $sac_dresponse->buildhierarchy($sac_xml, $sac_ns);
+            //} catch (Exception $e) {
+              //  throw new Exception("Error parsing response entry (" . $e->getMessage() . ")");
+            // }
         } else {
             try {
                 // Parse the result
